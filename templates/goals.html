@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hackin UTU</title>
+    <link rel="stylesheet" href="../static/css/goals.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
+    <meta property="og:title" content="innovators2.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="img/png" />
+    <meta property="og:description" content="My goals" />
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="line1"></div>
+    <p class="heading">Text matching</p>
+    <div class="line2"></div>
+    <form action="{{url_for('predict')}}"method="post">
+    <div class="text-box-1 text">
+        <input type="text" name="text1" placeholder="text1" required="required" />
+    </div>
+    <div class="text-box-2 text">
+        <input type="text" name="text2" placeholder="text2" required="required" />
+    </div>
+    <div class="button1 text"><button type="submit">Predict</button></div>
+        </form>
+    <div class="same" id="s">
+        <img src="../static/image/undraw_happy_announcement_ac67 1.svg" alt="same" class="same-img"></img> 
+        <h1>SAME</h1>
+    </div>
+    <div class="diff" id="d">
+        <h1>DIFFERENT</h1>
+        <img src="../static/image/undraw_Reviewed_docs_re_9lmr 1.svg" alt="different" class="diff-img"></img> 
+        
+    </div>
+    <div class="ham-bar">
+        <div class="hamburger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+
+        <ul class="ham-list">
+            <li class="ham-item">
+                <a href="index.html" class="ham-link">Home</a>
+            </li>
+            <li class="ham-item">
+                <a href="goals.html" class="ham-link">Text matching</a>
+            </li>
+            <li class="ham-item">
+                <a href="academics.html" class="ham-link">About Project</a>
+            </li>
+            <li class="ham-item">
+                <a href="aboutme.html" class="ham-link">About Us</a>
+            </li>
+        </ul>
+    </div>
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/particles.js"></script>
+    <script src="../static/js/app.js"></script>
+    <script>
+        var name="{{prediction_text}}";
+        var x=document.getElementById("s");
+        var y=document.getElementById("d");
+        if(name=="same"){
+            x.style.display="block";
+            y.style.display="none";
+        }
+        else if(name=="diff"){
+            x.style.display="none";
+            y.style.display="block";
+        }
+        else{
+        x.style.display="none";
+            y.style.display="none";
+            }
+
+    </script>
+</body>
+
+</html>

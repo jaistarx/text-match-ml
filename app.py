@@ -32,6 +32,18 @@ model=load_model(os.path.join(os.path.abspath(os.path.dirname(__file__)),"Textma
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/index.html')
+def indx():
+    return render_template('index.html')
+@app.route('/goals.html')
+def goals():
+    return render_template('goals.html')
+@app.route('/academics.html')
+def academics():
+    return render_template('academics.html')
+@app.route('/aboutme.html')
+def aboutme():
+    return render_template('aboutme.html')
 @app.route('/predict', methods=['POST'])
 def predict():
     int_features = [str(x) for x in request.form.values()]
@@ -41,7 +53,7 @@ def predict():
         output='same'
     else:
         output='diff'
-    return render_template('index.html', prediction_text= output)
+    return render_template('goals.html', prediction_text= output)
 
 if __name__ == "__main__":
     app.run(debug=True)

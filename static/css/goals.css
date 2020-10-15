@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    margin:0%;
+    padding:0%;
+    background-color: black;
+    color:white;
+  }
+
+.ham-bar{
+    width: 300px;
+    height: 100%;
+    background-color: rgb(10, 10, 10);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30% 0 0 40%;
+    transition: right .5s cubic-bezier(1,0,0,1);
+}
+
+.change{
+    right: 0px;
+}
+
+.hamburger-menu{
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: #3A2CFF;
+    transition: all 0.3s;
+}
+
+.change .line-1{
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2{
+    opacity: 0;
+}
+.change .line-3{
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.ham-list{
+    text-align: right;
+}
+
+.ham-item{
+    list-style: none;
+    margin: 25px;
+}
+
+.ham-link{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-weight:300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.ham-link::before,
+.ham-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color:#3A2CFF;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.ham-link::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+.ham-link::before{
+    top: 0;
+    transform-origin: left;
+}
+
+.ham-link:hover::before,
+.ham-link:hover::after{
+    transform: scaleX(1);
+}
+
+#particles-js{
+    opacity: 0.70;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 0;
+}
+
+.line1 {
+    width: 13vw;
+    height: 0.3vw;
+    background-color: #3A2CFF;
+    margin-top: 4vw;
+    position: relative;
+    margin-left: 49vw;
+}
+
+.line2 {
+    width: 13vw;
+    height: 0.3vw;
+    background-color:#3A2CFF;
+    position: relative;
+    margin-left: 40vw;
+}
+
+.heading {
+    color: white;
+    position: relative;
+    margin-left: 40vw;
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+.text {
+    text-align: justify;
+    word-spacing: -5px;
+    color: white;
+    margin-left: 5vw;
+  
+    position: relative;
+    margin-top: 1vw;
+    
+    font-size: 2vw;
+}
+
+.text-box-1,.text-box-2{
+    text-align: center;
+}
+
+ input{
+    width: 50%;
+    color: black;
+    font-weight: bold;
+    padding: 0.5%;
+    font-size: 1rem;
+}
+.button1{
+    text-align: center;
+    margin-top: 1%;
+}
+.button1 button{
+    border-radius: 7px;
+    padding: 0.5%;
+    width: 15%;
+    color: white;
+    background-color: #3A2CFF;
+    font-size: 1.3rem;
+}
+.same-img{
+    float: left;
+    padding-top: 3%;
+    width: 30%;
+    margin-left: 30%;
+}
+.diff-img{
+    padding-top: 3%;
+    width: 40%;
+    padding-right: 15%;
+}
+.same, .diff{
+    display: none;
+    position: relative;
+    text-align: center;
+}
+.same h1{
+    padding-top: 8%;
+    font-size: 4rem;
+    padding-right: 20%;
+    font-weight: bold;
+}
+
+.diff h1{
+    float: left;
+    padding-top: 8%;
+    font-size: 3rem;
+    padding-left: 26%;
+}
+@media (max-width: 900px) {
+    .heading {
+        color: white;
+        position: relative;
+        margin-top: 0.5vw;
+        margin-left: 5vw;
+        font-size: 7vw;
+        text-transform: uppercase;
+    }
+    
+    .line1 {
+        width: 23vw;
+        height: 0.8vw;
+        background-color: #3A2CFF;
+        margin-top: 14vw;
+        position: relative;
+        margin-left: 17vw;
+    }
+    
+    .line2 {
+        width: 23vw;
+        height: 0.8vw;
+        background-color: #3A2CFF;
+        margin-top: 0.5vw;
+        position: relative;
+        margin-left: 5vw;
+    }
+
+    .text {
+        text-align: justify;
+        color: white;
+        margin-left: 5vw;
+        margin-right: 4vw;
+        position: relative;
+        margin-top: 4vw;
+        float: left;
+        font-size: 5vw;
+    }
+}

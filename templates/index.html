@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ML API</title>
-</head>
-<body>
-    <div>
-        <h1>Text matching</h1>
-        <form action="{{url_for('predict')}}"method="post">
-            <input type="text" name="text1" placeholder="text1" required="required" />
-            <input type="text" name="text2" placeholder="text2" required="required" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hackin UTU</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  
+  
+    <meta property="og:type" content="website" />
+   
+    <meta property="og:description" content="Portfolio" />
+  </head>
 
-            <button type="submit">Predict</button>
-        </form>
-        <br>
-        <br>
-        {{prediction_text}}
+  <body>
+    <div id="particles-js"></div>
+    
+    <p class="head-name">
+      Text Matching  <br />
+      using Deep <br /> Learning
+    </p>
+
+    <div class="big-avatar">
+      <img src="../static/image/undraw_annotation_7das.svg" height="auto" class="centre" />
     </div>
-</body>
+    <div id="contactContainer">
+     
+      <span style="cursor: pointer"
+        ><a
+          class="fa fa-github icon"
+          href="https://github.com/jaistarx/text-match-ml"
+          target="_blank"
+          style="font-size: 4vw"
+        ></a
+      ></span>
+      
+    </div>
+    <div class="ham-bar">
+      <div class="hamburger-menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+
+      <ul class="ham-list">
+        <li class="ham-item">
+            <a href="index.html" class="ham-link">Home</a>
+        </li>
+        <li class="ham-item">
+            <a href="goals.html" class="ham-link">Text matching</a>
+        </li>
+        <li class="ham-item">
+            <a href="academics.html" class="ham-link">About Project</a>
+        </li>
+        <li class="ham-item">
+            <a href="aboutme.html" class="ham-link">About Us</a>
+        </li>
+    </ul>
+    </div>
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/particles.js"></script>
+    <script src="../static/js/app.js"></script>
+  </body>
 </html>
