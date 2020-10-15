@@ -1,8 +1,7 @@
 
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request,render_template
 
 import numpy as np
-import nltk
 import re
 from numpy import asarray
 
@@ -48,9 +47,7 @@ with io.open('listfile.txt','r',encoding='utf-8') as f1:
         current_place=line[:-1]
         data.append(current_place)
 
-data_processed = list(map(process_text, data))
-BASE_VECTORS = get_features(data_processed)
-def cosine_similarity(v1, v2):
+def cosines(v1, v2):
     mag1 = np.linalg.norm(v1)
     mag2 = np.linalg.norm(v2)
     if (not mag1) or (not mag2):
@@ -61,7 +58,7 @@ def cosine_similarity(v1, v2):
 def test_similarity(text1, text2):
     vec1 = get_features(text1)[0]
     vec2 = get_features(text2)[0]
-    return cosine_similarity(vec1, vec2)
+    return cosines(vec1, vec2)
 app = Flask(__name__)
 
 
